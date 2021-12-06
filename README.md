@@ -35,3 +35,7 @@ T.: Gute Grundlage für React
 # Initialisierung
 
 `npx create-react-app --use-npm --template typescript cookbook`
+
+`cd cookbook`
+
+`npm start`
