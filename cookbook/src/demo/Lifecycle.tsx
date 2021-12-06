@@ -38,6 +38,14 @@ const Lifecycle = (): ReactElement => {
     };
   });
 
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const response = await fetch();
+  //     const data = await response.json();
+  //   }
+  //   fetchData();
+  // }, []);
+
   return <div>Lifecylce works</div>;
 };
 
