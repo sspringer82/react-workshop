@@ -5,10 +5,7 @@ import State from './demo/State';
 import RecipeList from './list/RecipeList';
 
 const App = (): ReactElement => {
-  // eslint-disable-next-line no-restricted-globals
-  confirm('foo');
-  return <Interaction />;
-  // return <RecipeList />;
+  return <RecipeList />;
 };
 
 export default App;

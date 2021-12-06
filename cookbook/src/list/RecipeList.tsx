@@ -13,11 +13,23 @@ const RecipeList = (): ReactElement => {
 
   let recipeList: ReactElement = <div>Aktuell gibt es keine Rezepte</div>;
 
+  function handleDelete(id: number) {
+    // eslint-disable-next-line no-restricted-globals
+    if (confirm('Bist du dir wirklich sicher?')) {
+      setRecipes((prevRecipes) => {
+        return prevRecipes.filter((recipe) => recipe.id !== id);
+      });
+    }
+  }
+
   if (recipes.length > 0) {
     recipeList = (
       <>
         {recipes.map((recipe) => (
-          <div key={recipe.id}>{recipe.title}</div>
+          <div key={recipe.id}>
+            {recipe.title}
+            <button onClick={() => handleDelete(recipe.id)}>löschen</button>
+          </div>
         ))}
       </>
     );
