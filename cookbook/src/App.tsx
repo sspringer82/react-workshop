@@ -1,10 +1,11 @@
 import { ReactElement } from 'react';
 import './App.css';
+import Interaction from './demo/Interaction';
 import State from './demo/State';
 import RecipeList from './list/RecipeList';
 
 const App = (): ReactElement => {
-  return <State />;
+  return <Interaction />;
   // return <RecipeList />;
 };
 
