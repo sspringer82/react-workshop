@@ -28,3 +28,10 @@ T.: Gute Grundlage für React
 - NPMTrends: https://www.npmtrends.com/
 - React Doku: https://reactjs.org/docs/getting-started.html
 - Neue React Doku: https://beta.reactjs.org/
+- React Library List: https://github.com/brillout/awesome-react-components
+- React integrieren: https://reactjs.org/docs/add-react-to-a-website.html
+- Create React App: https://create-react-app.dev/
+
+# Initialisierung
+
+`npx create-react-app --use-npm --template typescript cookbook`
