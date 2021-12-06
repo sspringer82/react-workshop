@@ -31,6 +31,7 @@ T.: Gute Grundlage für React
 - React Library List: https://github.com/brillout/awesome-react-components
 - React integrieren: https://reactjs.org/docs/add-react-to-a-website.html
 - Create React App: https://create-react-app.dev/
+- Node Version manager: https://github.com/nvm-sh/nvm
 
 # Initialisierung
 
