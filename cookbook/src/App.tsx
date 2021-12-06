@@ -1,7 +1,8 @@
 import './App.css';
+import Component from './demo/Component';
 
 function App() {
-  return <div>Hallo React</div>;
+  return <Component />;
 }
 
 export default App;
