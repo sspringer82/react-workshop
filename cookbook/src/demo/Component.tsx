@@ -1,9 +1,10 @@
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 
 // Name UpperCase first
 // immer 1 Komponente pro Datei
 // JSX = HTML in JavaScript
 // React Elemente fangen mit einem Kleinbuchstaben an und mappen auf HTML-Elemente
+// eine Komponente muss genau ein Root-Element zurückgeben
 const Component = (): ReactElement => {
   const name = 'React.js';
 
@@ -14,16 +15,19 @@ const Component = (): ReactElement => {
   const names = ['Tick', 'Trick', 'Track'];
 
   return (
-    <div>
-      Hallo {name} {1 + 1}
-      {weather !== 'rain' ? rain : sun}
-      {getWeather(weather)}
-      {names
-        .filter((name) => name !== 'Trick')
-        .map((name) => {
-          return <div>{name}</div>;
-        })}
-    </div>
+    <>
+      <h1>Hallo Demo</h1>
+      <div>
+        Hallo {name} {1 + 1}
+        {weather !== 'rain' ? rain : sun}
+        {getWeather(weather)}
+        {names
+          .filter((name) => name !== 'Trick')
+          .map((name) => {
+            return <div>{name}</div>;
+          })}
+      </div>
+    </>
   );
 };
 
