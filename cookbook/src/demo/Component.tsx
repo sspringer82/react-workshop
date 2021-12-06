@@ -12,7 +12,11 @@ const Component = (): ReactElement => {
   const rain = <div>rain</div>;
   const weather = 'rain';
 
-  const names = ['Tick', 'Trick', 'Track'];
+  const characters = [
+    { name: 'Tick', age: 42 },
+    { name: 'Trick', age: 42 },
+    { name: 'Track', age: 42 },
+  ];
 
   return (
     <>
@@ -21,10 +25,14 @@ const Component = (): ReactElement => {
         Hallo {name} {1 + 1}
         {weather !== 'rain' ? rain : sun}
         {getWeather(weather)}
-        {names
-          .filter((name) => name !== 'Trick')
-          .map((name) => {
-            return <div>{name}</div>;
+        {characters
+          .filter((character) => character.name !== 'Trick')
+          .map((character) => {
+            return (
+              <div>
+                {character.name} ({character.age})
+              </div>
+            );
           })}
       </div>
     </>
