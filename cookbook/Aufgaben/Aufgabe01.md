@@ -1,6 +1,6 @@
 # Aufgabe 1
 
-Erzeuge eine Liste von Rezepten. Zeige in der Liste die Titel der Rezepte an.
+Erzeuge eine Liste von Rezepten. Zeige in der Liste die Titel der Rezepte an. Der Name der Komponente lautet RecipeList.
 
 Struktur eines Rezepts:
 
