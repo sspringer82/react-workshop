@@ -7,7 +7,7 @@ type Props = {
 };
 
 const Child = ({ name }: Props): ReactElement => {
-  return <li key={name}>{name}</li>;
+  return <li>{name}</li>;
 };
 
 type InputProps = {
@@ -35,7 +35,7 @@ const Parent = (): ReactElement => {
     <>
       <ul>
         {names.map((name) => (
-          <Child name={name} />
+          <Child name={name} key={name} />
         ))}
       </ul>
       <CustomInput label="myCustomInput" disabled />
