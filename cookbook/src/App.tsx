@@ -1,9 +1,9 @@
 import { ReactElement } from 'react';
 import './App.css';
-import LifecycleProxy from './demo/Lifecycle';
+import RecipeList from './list/RecipeList';
 
 const App = (): ReactElement => {
-  return <LifecycleProxy />;
+  return <RecipeList />;
 };
 
 export default App;

@@ -1,16 +1,21 @@
-import { ReactElement, useState } from 'react';
+import { ReactElement, useEffect, useState } from 'react';
 import Recipe from './Recipe';
 import RecipeListItem from './RecipeListItem';
 
-const initialRecipes: Recipe[] = [
-  { id: 1, title: 'Schnitzel', steps: [], ingredients: [] },
-  { id: 2, title: 'Tomatensuppe', steps: [], ingredients: [] },
-  { id: 3, title: 'Currywurst', steps: [], ingredients: [] },
-];
-
 const RecipeList = (): ReactElement => {
-  console.log('render!');
-  const [recipes, setRecipes] = useState<Recipe[]>(initialRecipes);
+  const [recipes, setRecipes] = useState<Recipe[]>([]);
+
+  useEffect(() => {
+    // async function fetchData() {
+    //   const response = await fetch('http://localhost:3001/recipes');
+    //   const data = await response.json();
+    //   setRecipes(data);
+    // }
+    // fetchData();
+    fetch('http://localhost:3001/recipes')
+      .then((response) => response.json())
+      .then((data) => setRecipes(data));
+  }, []);
 
   let recipeList: ReactElement = <div>Aktuell gibt es keine Rezepte</div>;
 
