@@ -11,6 +11,12 @@
       "title": "Bratkartoffeln",
       "ingredients": ["Kartoffeln", "Zwiebeln"],
       "steps": ["Kartoffeln schälen", "braten"]
+    },
+    {
+      "id": 3,
+      "title": "Currywurst",
+      "ingredients": ["Wurst", "Soße", "Curry"],
+      "steps": ["Auf den Grill", "Soße drübber", "Mit Currypulver garnieren"]
     }
   ]
 }
