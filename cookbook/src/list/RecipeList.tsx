@@ -1,13 +1,16 @@
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 import Recipe from './Recipe';
 
-const recipes: Recipe[] = [
+const initialRecipes: Recipe[] = [
   { id: 1, title: 'Schnitzel', steps: [], ingredients: [] },
   { id: 2, title: 'Tomatensuppe', steps: [], ingredients: [] },
   { id: 3, title: 'Currywurst', steps: [], ingredients: [] },
 ];
 
 const RecipeList = (): ReactElement => {
+  console.log('render!');
+  const [recipes, setRecipes] = useState<Recipe[]>(initialRecipes);
+
   let recipeList: ReactElement = <div>Aktuell gibt es keine Rezepte</div>;
 
   if (recipes.length > 0) {
