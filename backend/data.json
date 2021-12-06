@@ -3,8 +3,14 @@
     {
       "id": 1,
       "title": "Schnitzel",
-      "ingredients": [],
-      "steps": []
+      "ingredients": ["Fleisch", "Panade"],
+      "steps": ["panieren", "braten"]
+    },
+    {
+      "id": 2,
+      "title": "Bratkartoffeln",
+      "ingredients": ["Kartoffeln", "Zwiebeln"],
+      "steps": ["Kartoffeln schälen", "braten"]
     }
   ]
 }
