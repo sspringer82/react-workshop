@@ -10,3 +10,5 @@ title: string
 ingredients: string[]
 steps: string[]
 ```
+
+Bonus: Wenn die Rezeptliste leer ist, zeige eine entsprechende Information an.
