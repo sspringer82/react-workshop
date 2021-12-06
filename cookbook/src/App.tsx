@@ -1,8 +1,9 @@
+import { ReactElement } from 'react';
 import './App.css';
-import Component from './demo/Component';
+import RecipeList from './list/RecipeList';
 
-function App() {
-  return <Component />;
-}
+const App = (): ReactElement => {
+  return <RecipeList />;
+};
 
 export default App;
