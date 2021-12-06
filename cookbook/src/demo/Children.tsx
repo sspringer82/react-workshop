@@ -1,4 +1,4 @@
-import { HTMLAttributes, HTMLInputTypeAttribute, ReactElement } from 'react';
+import { HTMLAttributes, ReactElement } from 'react';
 
 const names = ['Tick', 'Trick', 'Track'];
 

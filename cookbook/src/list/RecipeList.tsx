@@ -1,5 +1,6 @@
 import { ReactElement, useState } from 'react';
 import Recipe from './Recipe';
+import RecipeListItem from './RecipeListItem';
 
 const initialRecipes: Recipe[] = [
   { id: 1, title: 'Schnitzel', steps: [], ingredients: [] },
@@ -26,10 +27,11 @@ const RecipeList = (): ReactElement => {
     recipeList = (
       <>
         {recipes.map((recipe) => (
-          <div key={recipe.id}>
-            {recipe.title}
-            <button onClick={() => handleDelete(recipe.id)}>löschen</button>
-          </div>
+          <RecipeListItem
+            key={recipe.id}
+            recipe={recipe}
+            onDelete={handleDelete}
+          />
         ))}
       </>
     );
