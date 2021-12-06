@@ -1,9 +1,11 @@
 import { ReactElement, useEffect, useState } from 'react';
+import Filter from './Filter';
 import Recipe from './Recipe';
 import RecipeListItem from './RecipeListItem';
 
 const RecipeList = (): ReactElement => {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
+  const [filter, setFilter] = useState<string>('');
 
   useEffect(() => {
     // async function fetchData() {
@@ -31,13 +33,18 @@ const RecipeList = (): ReactElement => {
   if (recipes.length > 0) {
     recipeList = (
       <>
-        {recipes.map((recipe) => (
-          <RecipeListItem
-            key={recipe.id}
-            recipe={recipe}
-            onDelete={handleDelete}
-          />
-        ))}
+        <Filter onFilter={setFilter} />
+        {recipes
+          .filter((recipe) =>
+            recipe.title.toLowerCase().includes(filter.toLowerCase()),
+          )
+          .map((recipe) => (
+            <RecipeListItem
+              key={recipe.id}
+              recipe={recipe}
+              onDelete={handleDelete}
+            />
+          ))}
       </>
     );
   }
