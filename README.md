@@ -33,6 +33,13 @@ T.: Gute Grundlage für React
 - Create React App: https://create-react-app.dev/
 - Node Version manager: https://github.com/nvm-sh/nvm
 - MDN: https://developer.mozilla.org/
+- ESLint Regelsatz: https://github.com/sindresorhus/eslint-plugin-unicorn
+- Airbnb style: https://github.com/airbnb/javascript
+- JS Standard style: https://standardjs.com/
+- Google JS Style: https://google.github.io/styleguide/jsguide.html
+- Husky (git Hooks): https://github.com/typicode/husky
+- Prettier: https://prettier.io/
+- ESLint: https://eslint.org/
 
 # Initialisierung
 
