@@ -32,6 +32,7 @@ T.: Gute Grundlage für React
 - React integrieren: https://reactjs.org/docs/add-react-to-a-website.html
 - Create React App: https://create-react-app.dev/
 - Node Version manager: https://github.com/nvm-sh/nvm
+- MDN: https://developer.mozilla.org/
 
 # Initialisierung
 
