@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import './App.css';
+import Base from './demo/Context/Components';
 import List from './list/RecipeList';
 
 const App = (): ReactElement => {
@@ -8,7 +9,7 @@ const App = (): ReactElement => {
     <>
       {/* <List /> */}
 
-      <List />
+      <Base />
 
       {/* <button onClick={() => setShow((prevShow) => !prevShow)}>
         toggle dialog
