@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import Base from './demo/Context/Components';
+import Detail from './detail/Detail';
 import List from './list/RecipeList';
 import RecipesProvider from './RecipeContext';
 
@@ -22,7 +23,7 @@ const App = (): ReactElement => {
       <RecipesProvider>
         <Routes>
           <Route path="/" element={<List />} />
-          <Route path="/dummy/:id" element={<Dummy />} />
+          <Route path="/detail/:id" element={<Detail />} />
         </Routes>
       </RecipesProvider>
     </Router>

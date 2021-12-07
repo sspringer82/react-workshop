@@ -24,7 +24,6 @@ const RecipeList = (): ReactElement => {
             onDelete={handleDelete}
           />
         ))}
-        <Link to="/dummy/42">go to dummy</Link>
       </>
     );
   }
