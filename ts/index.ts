@@ -136,3 +136,13 @@ console.log(numberCol.getItems());
 const stringCol: Collection<string> = new Collection<string>();
 stringCol.addItem('a');
 console.log(stringCol.getItems());
+
+// import/export
+
+import dieter, { klaus, maria as importedMaria } from './user';
+import gummibärchen from './user';
+
+console.log(klaus);
+console.log(importedMaria);
+console.log(dieter);
+console.log(gummibärchen);
