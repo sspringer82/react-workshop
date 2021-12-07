@@ -1,4 +1,5 @@
 import { ReactElement, useRef } from 'react';
+import { ButtonContainer, Form } from './Filter.style';
 
 type Props = {
   onFilter: (filter: string) => void;
@@ -17,7 +18,7 @@ const Filter = ({ onFilter }: Props): ReactElement => {
   }
 
   return (
-    <form
+    <Form
       onSubmit={(event) => {
         event.preventDefault();
         if (inputRef.current?.value !== undefined) {
@@ -28,9 +29,11 @@ const Filter = ({ onFilter }: Props): ReactElement => {
       <label>
         Suche: <input type="text" ref={inputRef} />
       </label>
-      <button type="submit">suchen</button>
-      <button onClick={handleClear}>clear</button>
-    </form>
+      <ButtonContainer>
+        <button type="submit">suchen</button>
+        <button onClick={handleClear}>clear</button>
+      </ButtonContainer>
+    </Form>
   );
 };
 

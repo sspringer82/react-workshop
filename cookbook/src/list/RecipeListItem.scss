@@ -1,0 +1,13 @@
+.ListRecipeListItem {
+  width: 400px;
+  border: 1px solid black;
+  margin: 3px 10px;
+  padding: 5px;
+  position: relative;
+  box-shadow: 0px 2px 2px 0px lightgrey;
+
+  button {
+    position: absolute;
+    right: 10px;
+  }
+}

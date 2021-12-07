@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import Recipe from './Recipe';
+import './RecipeListItem.scss';
 
 type Props = {
   recipe: Recipe;
@@ -8,7 +9,7 @@ type Props = {
 
 const RecipeListItem = ({ recipe, onDelete }: Props): ReactElement => {
   return (
-    <div>
+    <div className="ListRecipeListItem">
       {recipe.title}
       <button onClick={() => onDelete(recipe.id)}>löschen</button>
     </div>
