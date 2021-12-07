@@ -5,6 +5,7 @@ Integriere den React Router in die Applikation.
 Der Pfad / zeigt auf die Liste
 
 `<Link to={'detail/' + id}>link</Link>`
+`const navigate = useNavigate(); navigate('/detail/' + 42);`
 
 Der Pfad /detail/:id zeigt auf die Detailansicht eines Rezepts.
 
