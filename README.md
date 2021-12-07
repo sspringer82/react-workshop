@@ -47,6 +47,9 @@ T.: Gute Grundlage für React
 - Tailwind: https://tailwindcss.com/docs/guides/create-react-app
 - Thinking in React: https://de.reactjs.org/docs/thinking-in-react.html
 - Material Design: https://material.io/
+- Additional Reading:
+  - https://kentcdodds.com/blog
+  - https://overreacted.io/
 
 # Initialisierung
 

@@ -4,10 +4,10 @@ import B from './B';
 import Context from './Context';
 
 const Base = () => {
-  const state = useState('hallo');
+  const stateGetterAndSetter = useState('hallo');
   return (
     <>
-      <Context.Provider value={state}>
+      <Context.Provider value={stateGetterAndSetter}>
         <A />
         <B />
       </Context.Provider>
