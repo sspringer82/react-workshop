@@ -45,6 +45,8 @@ T.: Gute Grundlage für React
 - CSS Modules: https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/
 - Styled components: https://styled-components.com/
 - Tailwind: https://tailwindcss.com/docs/guides/create-react-app
+- Thinking in React: https://de.reactjs.org/docs/thinking-in-react.html
+- Material Design: https://material.io/
 
 # Initialisierung
 
