@@ -40,6 +40,10 @@ T.: Gute Grundlage für React
 - Husky (git Hooks): https://github.com/typicode/husky
 - Prettier: https://prettier.io/
 - ESLint: https://eslint.org/
+- TypeScript: https://www.typescriptlang.org/docs/handbook/intro.html
+- TypeScript: https://www.typescriptlang.org/docs/
+- CSS Modules: https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/
+- Styled components: https://styled-components.com/
 
 # Initialisierung
 
