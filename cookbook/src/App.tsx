@@ -1,16 +1,14 @@
-import { ReactElement, useState } from 'react';
+import { ReactElement } from 'react';
 import './App.css';
-import CustomHook from './demo/CustomHook/CustomHook';
-import Dialog from './Dialog/Dialog';
 import List from './list/RecipeList';
 
 const App = (): ReactElement => {
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
   return (
     <>
       {/* <List /> */}
 
-      <CustomHook />
+      <List />
 
       {/* <button onClick={() => setShow((prevShow) => !prevShow)}>
         toggle dialog

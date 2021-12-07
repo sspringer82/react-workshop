@@ -6,16 +6,14 @@ type ReturnValue = {
 
 export default function useProvideName(): ReturnValue {
   const [name, setName] = useState<string>('');
-
+  useEffect(() => {
+    handleTheTimeout();
+  }, []);
   function handleTheTimeout() {
     setTimeout(() => {
       setName('Lisa');
     }, 1000);
   }
-
-  useEffect(() => {
-    handleTheTimeout();
-  }, []);
 
   return { name };
 }
