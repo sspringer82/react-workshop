@@ -5,10 +5,10 @@ import styles from './Styling.module.css';
 import { Container, Headline } from './Styling.styles';
 
 // 1. inline style mit style-Prop
-// 2. css import - achtung nicht namespaced
+// 2. css import - achtung nicht namespaced - bitte an className denken!
 // 3. SCSS! npm install node-sass
 // 4. CSS Modules
-// 5. CSS Libraries z.B. styled-componentsn (npm install styled-components @types/styled-components)
+// 5. CSS Libraries z.B. styled-components (npm install styled-components @types/styled-components)
 
 const Styling = (): ReactElement => {
   return (

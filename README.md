@@ -44,6 +44,7 @@ T.: Gute Grundlage für React
 - TypeScript: https://www.typescriptlang.org/docs/
 - CSS Modules: https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/
 - Styled components: https://styled-components.com/
+- Tailwind: https://tailwindcss.com/docs/guides/create-react-app
 
 # Initialisierung
 

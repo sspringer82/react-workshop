@@ -2,9 +2,13 @@ import styled from 'styled-components';
 
 const bgColor = 'maroon';
 
-export const Container = styled.div`
+type Props = {
+  disabled?: boolean;
+};
+
+export const Container = styled.div<Props>`
   border: 3px solid limegreen;
-  background-color: ${bgColor};
+  background-color: ${(props) => (props.disabled ? 'grey' : bgColor)};
   color: yellow;
 `;
 
