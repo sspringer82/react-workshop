@@ -1,5 +1,6 @@
 import { ReactElement, useState } from 'react';
 import './App.css';
+import CustomHook from './demo/CustomHook/CustomHook';
 import Dialog from './Dialog/Dialog';
 import List from './list/RecipeList';
 
@@ -7,8 +8,11 @@ const App = (): ReactElement => {
   const [show, setShow] = useState(false);
   return (
     <>
-      <List />
-      <button onClick={() => setShow((prevShow) => !prevShow)}>
+      {/* <List /> */}
+
+      <CustomHook />
+
+      {/* <button onClick={() => setShow((prevShow) => !prevShow)}>
         toggle dialog
       </button>
       {show && (
@@ -20,7 +24,7 @@ const App = (): ReactElement => {
         >
           <div>HIER IST DER INHALT</div>
         </Dialog>
-      )}
+      )} */}
     </>
   );
 };
