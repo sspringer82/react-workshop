@@ -1,16 +1,38 @@
 import { ReactElement } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useParams,
+} from 'react-router-dom';
 import './App.css';
 import Base from './demo/Context/Components';
 import List from './list/RecipeList';
 import RecipesProvider from './RecipeContext';
 
+function Dummy() {
+  const { id } = useParams();
+  return <div>Hallo Welt {id}</div>;
+}
+
 const App = (): ReactElement => {
   // const [show, setShow] = useState(false);
   return (
-    <RecipesProvider>
-      <List />
+    <Router>
+      <RecipesProvider>
+        <Routes>
+          <Route path="/" element={<List />} />
+          <Route path="/dummy/:id" element={<Dummy />} />
+        </Routes>
+      </RecipesProvider>
+    </Router>
+  );
+};
 
-      {/* <button onClick={() => setShow((prevShow) => !prevShow)}>
+export default App;
+
+{
+  /* <button onClick={() => setShow((prevShow) => !prevShow)}>
         toggle dialog
       </button>
       {show && (
@@ -22,9 +44,5 @@ const App = (): ReactElement => {
         >
           <div>HIER IST DER INHALT</div>
         </Dialog>
-      )} */}
-    </RecipesProvider>
-  );
-};
-
-export default App;
+      )} */
+}

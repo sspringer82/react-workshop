@@ -58,3 +58,10 @@ T.: Gute Grundlage für React
 `cd cookbook`
 
 `npm start`
+
+# React Router
+
+1. `npm install react-router-dom@6`
+2. BrowserRouter möglichst in der Nähe der Wurzel des Komponentenbaums integrieren
+3. Routes Komponente integrieren
+4. Routendefinition mit Route-Komponente (path und element)
