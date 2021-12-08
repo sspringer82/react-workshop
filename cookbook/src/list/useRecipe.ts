@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { RecipesContext } from '../RecipeContext';
-import Recipe from './Recipe';
+import Recipe from '../shared/Recipe';
 
 export default function useRecipe() {
   const [recipes, setRecipes] = useContext(RecipesContext);

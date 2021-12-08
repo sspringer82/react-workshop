@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import useRecipe from '../list/useRecipe';
+import NotFound from '../NotFound';
 
 const Detail = (): ReactElement => {
   const { id } = useParams();
@@ -10,7 +11,9 @@ const Detail = (): ReactElement => {
   if (recipe) {
     return <h1>{recipe.title}</h1>;
   }
-  return <div>Das Rezept gibt's nicht!</div>;
+  // return <div>Das Rezept gibt's nicht!</div>;
+  return <NotFound />;
+  // return <Navigate to="/notfound"></Navigate>;
 };
 
 export default Detail;

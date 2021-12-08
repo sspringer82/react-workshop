@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Recipe from './Recipe';
+import Recipe from '../shared/Recipe';
 import './RecipeListItem.scss';
 
 type Props = {

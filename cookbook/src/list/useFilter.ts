@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Recipe from './Recipe';
+import Recipe from '../shared/Recipe';
 
 export default function useFilter() {
   const [filter, setFilter] = useState<string>('');
