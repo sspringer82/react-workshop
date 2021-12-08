@@ -2,6 +2,10 @@
 
 Validiere das Formular mit Formik und Yup.
 
+## Installation
+
+`npm install formik yup`
+
 ## Formik
 
 https://formik.org/docs/overview#reducing-boilerplate
