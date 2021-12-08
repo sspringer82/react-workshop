@@ -7,8 +7,10 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import Base from './demo/Context/Components';
+import Form from './demo/Form';
 import Detail from './detail/Detail';
 import List from './list/RecipeList';
+import NotFound from './NotFound';
 import RecipesProvider from './RecipeContext';
 
 function Dummy() {
@@ -17,22 +19,24 @@ function Dummy() {
 }
 
 const App = (): ReactElement => {
-  // const [show, setShow] = useState(false);
-  return (
-    <Router>
-      <RecipesProvider>
-        <Routes>
-          <Route path="/" element={<List />} />
-          <Route path="/detail/:id" element={<Detail />} />
-        </Routes>
-      </RecipesProvider>
-    </Router>
-  );
+  return <Form />;
+  // return (
+  //   <Router>
+  //     <RecipesProvider>
+  //       <Routes>
+  //         <Route path="/" element={<List />} />
+  //         <Route path="/detail/:id" element={<Detail />} />
+  //         <Route path="/notfound" element={<NotFound />} />
+  //       </Routes>
+  //     </RecipesProvider>
+  //   </Router>
+  // );
 };
 
 export default App;
 
 {
+  // const [show, setShow] = useState(false);
   /* <button onClick={() => setShow((prevShow) => !prevShow)}>
         toggle dialog
       </button>
