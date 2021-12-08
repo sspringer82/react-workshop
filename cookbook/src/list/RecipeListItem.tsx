@@ -12,7 +12,7 @@ const RecipeListItem = ({ recipe, onDelete }: Props): ReactElement => {
   const navigate = useNavigate();
   return (
     <div className="ListRecipeListItem">
-      {recipe.title}
+      <span data-testid="title">{recipe.title}</span>
       <button onClick={() => onDelete(recipe.id)}>löschen</button>
       {/* <Link to={`/detail/${recipe.id}`}>details</Link> */}
       <button onClick={() => navigate(`/detail/${recipe.id}`)}>details</button>
