@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecipeListItem should do a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ListRecipeListItem"
+  >
+    <span
+      data-testid="title"
+    >
+      Nudelsuppe
+    </span>
+    <button
+      data-testid="delete-button"
+    >
+      löschen
+    </button>
+    <button>
+      details
+    </button>
+  </div>
+</DocumentFragment>
+`;
