@@ -11,8 +11,8 @@ Validiere das Formular mit Formik und Yup.
 https://formik.org/docs/overview#reducing-boilerplate
 
 1. Formik Komponente einbinden
-   1. InitialValues
-   1. handleSubmit
+   1. initialValues
+   1. onSubmit
 1. Kind-Render-Funktion, die JSX zurückgibt
 1. Formular bauen mit Form, Field, (optional: ErrorMessage)
 1. Submit-Button
