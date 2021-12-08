@@ -1,4 +1,4 @@
-import Calc from './Styling/calc';
+import Calc from './calc';
 
 describe('Calc', () => {
   let calc: Calc;
