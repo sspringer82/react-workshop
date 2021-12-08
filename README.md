@@ -50,6 +50,9 @@ T.: Gute Grundlage für React
 - Additional Reading:
   - https://kentcdodds.com/blog
   - https://overreacted.io/
+- Axios (HTTP Client): https://github.com/axios/axios
+- Push API: https://developer.mozilla.org/de/docs/Web/API/Push_API
+- PWA: https://create-react-app.dev/docs/making-a-progressive-web-app/
 
 # Initialisierung
 
