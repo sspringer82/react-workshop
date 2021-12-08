@@ -1,7 +1,9 @@
-import { ChangeEvent, FormEvent, ReactElement, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import useRecipe from '../list/useRecipe';
+import { ReactElement } from 'react';
 import { InputRecipe } from '../shared/Recipe';
+import { Formik, Form as FormikForm, Field, ErrorMessage } from 'formik';
+import useForm from './useForm';
+import { validationSchema } from './schema';
+import './Form.css';
 
 const initialRecipe: InputRecipe = {
   title: '',
@@ -10,39 +12,33 @@ const initialRecipe: InputRecipe = {
 };
 
 const Form = (): ReactElement => {
-  const { handleSave } = useRecipe();
-  const [recipe, setRecipe] = useState<InputRecipe>(initialRecipe);
-  const navigate = useNavigate();
-
-  function handleChange(event: ChangeEvent<HTMLInputElement>) {
-    const { name, value } = event.target;
-
-    setRecipe((prevRecipe) => {
-      return { ...prevRecipe, [name]: value };
-    });
-  }
-
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    console.log(recipe);
-    await handleSave(recipe);
-    setRecipe(initialRecipe);
-    navigate('/');
-  }
+  const handleSubmit = useForm();
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Titel:{' '}
-        <input
-          type="text"
-          name="title"
-          value={recipe.title}
-          onChange={handleChange}
-        />
-      </label>
-      <button>speichern</button>
-    </form>
+    <Formik
+      initialValues={initialRecipe}
+      onSubmit={handleSubmit}
+      validationSchema={validationSchema}
+    >
+      {({ errors, touched }) => {
+        return (
+          <FormikForm>
+            <label>
+              Titel:
+              <Field type="text" name="title" />
+              <ErrorMessage
+                name="title"
+                render={(error: string) => <div className="error">{error}</div>}
+              />
+            </label>
+
+            <div>
+              <button>speichern</button>
+            </div>
+          </FormikForm>
+        );
+      }}
+    </Formik>
   );
 };
 
