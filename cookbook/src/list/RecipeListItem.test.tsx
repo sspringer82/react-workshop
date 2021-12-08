@@ -1,18 +1,17 @@
-import { act, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import Recipe from '../shared/Recipe';
 import RecipeListItem from './RecipeListItem';
 
 describe('RecipeListItem', () => {
+  // arrange
+  const recipe: Recipe = {
+    id: 1,
+    title: 'Nudelsuppe',
+    ingredients: [],
+    steps: [],
+  };
   it('should render', () => {
-    // arrange
-    const recipe: Recipe = {
-      id: 1,
-      title: 'Nudelsuppe',
-      ingredients: [],
-      steps: [],
-    };
-
     // act
     act(() => {
       render(
@@ -23,6 +22,23 @@ describe('RecipeListItem', () => {
     });
 
     // assert
-    expect(screen.getByTestId('title')).toHaveTextContent('Nudelsuppe');
+    expect(screen.getByTestId('title').textContent).toBe('Nudelsuppe');
+  });
+
+  it('should trigger onDelete when the delete button is clicked', () => {
+    const onDeleteSpy = jest.fn();
+
+    act(() => {
+      render(
+        <MemoryRouter>
+          <RecipeListItem recipe={recipe} onDelete={onDeleteSpy} />
+        </MemoryRouter>,
+      );
+    });
+
+    fireEvent.click(screen.getByTestId('delete-button'));
+
+    expect(onDeleteSpy).toHaveBeenCalledTimes(1);
+    expect(onDeleteSpy).toHaveBeenCalledWith(1);
   });
 });

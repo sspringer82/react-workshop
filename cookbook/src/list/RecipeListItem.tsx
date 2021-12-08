@@ -13,7 +13,9 @@ const RecipeListItem = ({ recipe, onDelete }: Props): ReactElement => {
   return (
     <div className="ListRecipeListItem">
       <span data-testid="title">{recipe.title}</span>
-      <button onClick={() => onDelete(recipe.id)}>löschen</button>
+      <button onClick={() => onDelete(recipe.id)} data-testid="delete-button">
+        löschen
+      </button>
       {/* <Link to={`/detail/${recipe.id}`}>details</Link> */}
       <button onClick={() => navigate(`/detail/${recipe.id}`)}>details</button>
     </div>
