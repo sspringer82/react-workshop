@@ -56,6 +56,16 @@ T.: Gute Grundlage für React
 - Jest: https://jestjs.io/
 - Cypress (Integrationstests): https://www.cypress.io/
 - React Testing Library: https://testing-library.com/docs/react-testing-library/intro/
+- Redux: https://redux.js.org/
+- MobX: https://mobx.js.org/
+- XState: https://xstate.js.org/
+- Flux:
+- Flux Standard Action: https://github.com/redux-utilities/flux-standard-action
+- Redux Thunk (Promises): https://github.com/reduxjs/redux-thunk
+- Redux Saga (Generators): https://redux-saga.js.org/
+- Redux Observable (RxJS): https://redux-observable.js.org/
+- Redux Toolkit: https://redux-toolkit.js.org/
+- Völlig overengineerte todo app (Redux Saga - Feb 2021): https://github.com/sspringer82/todo
 
 # Initialisierung
 
