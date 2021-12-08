@@ -9,8 +9,6 @@ const RecipeList = (): ReactElement => {
   const { recipes, handleDelete } = useRecipe();
   const { setFilter, applyFilter } = useFilter();
 
-  const history = useLocation();
-
   let recipeList: ReactElement = <div>Aktuell gibt es keine Rezepte</div>;
 
   if (recipes.length > 0) {
@@ -24,6 +22,7 @@ const RecipeList = (): ReactElement => {
             onDelete={handleDelete}
           />
         ))}
+        <Link to="/form">Neu</Link>
       </>
     );
   }

@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { RecipesContext } from '../RecipeContext';
-import Recipe from '../shared/Recipe';
+import Recipe, { InputRecipe } from '../shared/Recipe';
 
 export default function useRecipe() {
   const [recipes, setRecipes] = useContext(RecipesContext);
@@ -20,6 +20,18 @@ export default function useRecipe() {
     }
   }
 
+  async function handleSave(recipe: InputRecipe) {
+    const response = await fetch('http://localhost:3001/recipes', {
+      method: 'POST',
+      headers: { 'Content-Type': 'Application/JSON' },
+      body: JSON.stringify(recipe),
+    });
+    if (response.ok) {
+      const createdRecipe = await response.json();
+      setRecipes((prevRecipes) => [...prevRecipes, createdRecipe]);
+    }
+  }
+
   function getById(id: number): Recipe | undefined {
     return recipes.find((recipe) => recipe.id === id);
   }
@@ -28,5 +40,6 @@ export default function useRecipe() {
     recipes,
     handleDelete,
     getById,
+    handleSave,
   };
 }

@@ -6,3 +6,5 @@ type Recipe = {
 };
 
 export default Recipe;
+
+export type InputRecipe = Omit<Recipe, 'id'> & { id?: number };
