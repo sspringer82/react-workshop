@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
+import Component from './demo/Test/Component';
 import Detail from './detail/Detail';
 import Form from './Form/Form';
 import RecipeList from './list/RecipeList';
@@ -10,6 +11,7 @@ import RecipesProvider from './RecipeContext';
 const App = (): ReactElement => {
   return (
     <Router>
+      <Component />
       <RecipesProvider>
         <Routes>
           <Route path="/" element={<RecipeList />} />

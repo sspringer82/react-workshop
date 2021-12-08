@@ -53,6 +53,9 @@ T.: Gute Grundlage für React
 - Axios (HTTP Client): https://github.com/axios/axios
 - Push API: https://developer.mozilla.org/de/docs/Web/API/Push_API
 - PWA: https://create-react-app.dev/docs/making-a-progressive-web-app/
+- Jest: https://jestjs.io/
+- Cypress (Integrationstests): https://www.cypress.io/
+- React Testing Library: https://testing-library.com/docs/react-testing-library/intro/
 
 # Initialisierung
 
