@@ -10,3 +10,9 @@ global.fetch = jest.fn(() =>
       })
 )
 ```
+
+1. Basissetup für den Test
+2. global.fetch mocken
+3. RecipeContext einbinden
+4. RecipeList innerhalb des Contextes rendern
+5. Sichtbarkeit der Daten überprüfen
