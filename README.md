@@ -25,3 +25,4 @@ Was sind deine Erwartungen?
 - Bundler
   - https://rollupjs.org/
   - https://webpack.js.org/
+- https://fakerjs.dev/
