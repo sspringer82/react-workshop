@@ -26,3 +26,5 @@ Was sind deine Erwartungen?
   - https://rollupjs.org/
   - https://webpack.js.org/
 - https://fakerjs.dev/
+- https://eslint.org/
+- https://github.com/sindresorhus/eslint-plugin-unicorn
