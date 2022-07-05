@@ -1,8 +1,14 @@
 import { useState, useEffect } from 'react';
 
-function useAPI<T>(url: string): { error: string; items: T[] } {
+function useAPI<T>(url: string): {
+  error: string;
+  items: T[];
+  isLoading: boolean;
+} {
   const [items, setItems] = useState<T[]>([]);
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     (async () => {
       try {
@@ -11,6 +17,7 @@ function useAPI<T>(url: string): { error: string; items: T[] } {
         if (response.ok) {
           const data = await response.json();
           setItems(data);
+          setIsLoading(false);
         } else {
           setError('response not ok');
         }
@@ -20,7 +27,7 @@ function useAPI<T>(url: string): { error: string; items: T[] } {
     })();
   }, [url]);
 
-  return { error, items };
+  return { error, items, isLoading };
 }
 
 export default useAPI;

@@ -1,15 +1,22 @@
 import { ReactElement } from 'react';
+import { ClipLoader } from 'react-spinners';
 import { Book } from './Book';
 
 type Props = {
   error: string;
   books: Book[];
+  isLoading: boolean;
 };
 
-function BookList({ error, books }: Props): ReactElement {
+function BookList({ error, books, isLoading }: Props): ReactElement {
   return (
     <>
       {error && <div>{error}</div>}
+      {isLoading && (
+        <div>
+          <ClipLoader loading={true} size={150} />
+        </div>
+      )}
       {books && (
         <table>
           <thead>
