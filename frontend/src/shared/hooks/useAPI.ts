@@ -6,7 +6,9 @@ function useAPI<T>(url: string): {
   isLoading: boolean;
 } {
   const [items, setItems] = useState<T[]>([]);
+
   const [error, setError] = useState('');
+
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
