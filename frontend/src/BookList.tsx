@@ -26,12 +26,29 @@ function BookList(): ReactElement {
   }, []);
 
   return (
-    <div>
-      {books.map((book) => (
-        <div key={book.id}>{book.title}</div>
-      ))}
+    <>
       {error && <div>{error}</div>}
-    </div>
+      {books && (
+        <table>
+          <thead>
+            <tr>
+              <th>Titel</th>
+              <th>Autor</th>
+              <th>ISBN</th>
+            </tr>
+          </thead>
+          <tbody>
+            {books.map((book) => (
+              <tr key={book.id}>
+                <td>{book.title}</td>
+                <td>{book.author}</td>
+                <td>{book.isbn}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+    </>
   );
 }
 
