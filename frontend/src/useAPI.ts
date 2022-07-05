@@ -17,12 +17,13 @@ function useAPI<T>(url: string): {
         if (response.ok) {
           const data = await response.json();
           setItems(data);
-          setIsLoading(false);
         } else {
           setError('response not ok');
         }
       } catch (e) {
         setError('fetch failed');
+      } finally {
+        setIsLoading(false);
       }
     })();
   }, [url]);

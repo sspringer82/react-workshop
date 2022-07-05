@@ -8,7 +8,7 @@ function BookListContainer(): ReactElement {
     error,
     items: books,
     isLoading,
-  } = useAPI<Book>('http://localhost:3001/books');
+  } = useAPI<Book>(`${process.env.REACT_APP_BACKEND_URL}books`);
   return <BookList error={error} books={books} isLoading={isLoading} />;
 }
 
