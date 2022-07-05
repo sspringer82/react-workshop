@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import { ClipLoader } from 'react-spinners';
 import { Book } from './Book';
+import BookListItem from './BookListItem';
 
 type Props = {
   error: string;
@@ -28,11 +29,7 @@ function BookList({ error, books, isLoading }: Props): ReactElement {
           </thead>
           <tbody>
             {books.map((book) => (
-              <tr key={book.id}>
-                <td>{book.title}</td>
-                <td>{book.author}</td>
-                <td>{book.isbn}</td>
-              </tr>
+              <BookListItem key={book.id} book={book} />
             ))}
           </tbody>
         </table>
