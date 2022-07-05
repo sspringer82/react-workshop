@@ -1,6 +1,7 @@
 # Aufgabe 3
 
-Der Hook zum Daten-fetchen soll "generisch" sein (Typ + URL).
+Der Hook soll eine url-Eigenschaft akzeptieren.
+Der Typ des Hooks soll generisch aka. typescript generic sein.
 
 Integriere einen "Loading" state
 https://www.npmjs.com/package/react-spinners
