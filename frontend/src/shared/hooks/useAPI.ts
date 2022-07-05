@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
 
-function useAPI<T>(url: string): {
+function useAPI<T extends { id: number }>(
+  url: string
+): {
   error: string;
   items: T[];
   isLoading: boolean;
+  remove: (item: T) => Promise<void>;
 } {
   const [items, setItems] = useState<T[]>([]);
 
@@ -30,7 +33,16 @@ function useAPI<T>(url: string): {
     })();
   }, [url]);
 
-  return { error, items, isLoading };
+  async function remove(item: T) {
+    const response = await fetch(`${url}/${item.id}`, { method: 'DELETE' });
+    if (response.ok) {
+      setItems((prevItems) =>
+        prevItems.filter((prevItem) => prevItem.id !== item.id)
+      );
+    }
+  }
+
+  return { error, items, isLoading, remove };
 }
 
 export default useAPI;

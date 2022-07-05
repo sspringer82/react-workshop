@@ -8,13 +8,9 @@ type Props = {
 };
 
 function BooksProvider({ children }: Props): ReactElement {
-  const { error, items, isLoading } = useAPI<Book>(
-    `${process.env.REACT_APP_BACKEND_URL}books`
-  );
+  const value = useAPI<Book>(`${process.env.REACT_APP_BACKEND_URL}books`);
   return (
-    <BooksContext.Provider value={{ error, items, isLoading }}>
-      {children}
-    </BooksContext.Provider>
+    <BooksContext.Provider value={value}>{children}</BooksContext.Provider>
   );
 }
 

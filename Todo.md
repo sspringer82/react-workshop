@@ -9,3 +9,15 @@ Pagination
 Filter
 Sorting
 Virtual Scrolling
+
+useReducer
+undo
+optimistic Operation
+
+Redux
+Tests
+Formulare
+Mehrere React Applikationen auf einer Seite
+React vs. Web Components
+
+Websocket?
