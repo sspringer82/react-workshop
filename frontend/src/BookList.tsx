@@ -1,30 +1,12 @@
-import { ReactElement, useEffect, useState } from 'react';
+import { ReactElement } from 'react';
 import { Book } from './Book';
 
-function BookList(): ReactElement {
-  const [books, setBooks] = useState<Book[]>([]);
-  const [error, setError] = useState('');
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await fetch('http://localhost:3001/books');
+type Props = {
+  error: string;
+  books: Book[];
+};
 
-        if (response.ok) {
-          const data = await response.json();
-          setBooks(data);
-        } else {
-          setError('response not ok');
-        }
-      } catch (e) {
-        setError('fetch failed');
-      }
-    })();
-
-    //   fetch('http://localhost:3001/books')
-    //     .then((response) => response.json())
-    //     .then((data) => setBooks(data));
-  }, []);
-
+function BookList({ error, books }: Props): ReactElement {
   return (
     <>
       {error && <div>{error}</div>}
