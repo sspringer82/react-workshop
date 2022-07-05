@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { Book } from './Book';
+import { Book } from '../types/Book';
 type Props = {
   book: Book;
 };

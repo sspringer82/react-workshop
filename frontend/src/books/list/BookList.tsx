@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import { ClipLoader } from 'react-spinners';
-import { Book } from './Book';
+import { Book } from '../types/Book';
 import BookListItem from './BookListItem';
 
 type Props = {

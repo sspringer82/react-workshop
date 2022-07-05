@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
-import { Book } from './Book';
+import { Book } from '../types/Book';
 import BookList from './BookList';
-import useAPI from './useAPI';
+import useAPI from '../../shared/hooks/useAPI';
 
 function BookListContainer(): ReactElement {
   const {
