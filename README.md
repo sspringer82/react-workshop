@@ -28,3 +28,7 @@ Was sind deine Erwartungen?
 - https://fakerjs.dev/
 - https://eslint.org/
 - https://github.com/sindresorhus/eslint-plugin-unicorn
+- https://kentcdodds.com/
+- https://kentcdodds.com/blog/how-to-use-react-context-effectively
+- https://overreacted.io/
+- https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367
