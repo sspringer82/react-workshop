@@ -38,6 +38,9 @@ Was sind deine Erwartungen?
   - https://github.com/kolodny/immutability-helper
   - https://immerjs.github.io/immer/
   - https://immutable-js.com/
+- https://www.npmjs.com/package/npm-check-updates
+- https://snyk.io/advisor
+- https://www.npmjs.com/package/classnames
 
 ## Redux
 

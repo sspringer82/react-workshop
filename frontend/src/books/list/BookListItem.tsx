@@ -1,15 +1,14 @@
-import { ReactElement, useContext } from 'react';
-import BooksContext from '../../BooksContext';
+import { ReactElement } from 'react';
 import { Book } from '../types/Book';
 type Props = {
   book: Book;
+  remove: (book: Book) => void;
 };
 
-function BookListItem({ book }: Props): ReactElement {
-  const { remove } = useContext(BooksContext);
+function BookListItem({ book, remove }: Props): ReactElement {
   return (
     <tr>
-      <td>{book.title}</td>
+      <td data-testid="title">{book.title}</td>
       <td>{book.author}</td>
       <td>{book.isbn}</td>
       <td>
@@ -17,6 +16,7 @@ function BookListItem({ book }: Props): ReactElement {
           onClick={() => {
             remove(book);
           }}
+          data-testid="delete-btn"
         >
           löschen
         </button>
