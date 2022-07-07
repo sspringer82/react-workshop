@@ -67,7 +67,9 @@ export const counterSlice = createSlice({
       });
 
     builder.addCase(doSomethingAsync.pending, () => {});
-    builder.addCase(doSomethingAsync.fulfilled, () => {});
+    builder.addCase(doSomethingAsync.fulfilled, (state, action) => {
+      return { ...state, books: action.payload };
+    });
     builder.addCase(doSomethingAsync.rejected, () => {});
   },
 });
