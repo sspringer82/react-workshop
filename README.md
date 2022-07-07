@@ -31,4 +31,14 @@ Was sind deine Erwartungen?
 - https://kentcdodds.com/
 - https://kentcdodds.com/blog/how-to-use-react-context-effectively
 - https://overreacted.io/
-- https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367
+- https://medium.com/@dan_abramov/
+- you-might-not-need-redux-be46360cf367
+- https://github.com/redux-utilities/flux-standard-action
+- Immutability
+  - https://github.com/kolodny/immutability-helper
+  - https://immerjs.github.io/immer/
+  - https://immutable-js.com/
+
+## Redux
+
+`npx create-react-app redux-frontend --template redux-typescript `

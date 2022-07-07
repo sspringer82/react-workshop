@@ -14,8 +14,8 @@ useReducer
 undo
 optimistic Operation
 
-Redux
 Tests
+Redux
 Formulare
 Mehrere React Applikationen auf einer Seite
 React vs. Web Components
