@@ -26,6 +26,11 @@ export const incrementAsync = createAsyncThunk(
   }
 );
 
+export const doSomethingAsync = createAsyncThunk('fancyName', async () => {
+  // do async magic
+  // return response
+});
+
 export const counterSlice = createSlice({
   name: 'counter',
   initialState,
@@ -60,6 +65,10 @@ export const counterSlice = createSlice({
       .addCase(incrementAsync.rejected, (state) => {
         state.status = 'failed';
       });
+
+    builder.addCase(doSomethingAsync.pending, () => {});
+    builder.addCase(doSomethingAsync.fulfilled, () => {});
+    builder.addCase(doSomethingAsync.rejected, () => {});
   },
 });
 
